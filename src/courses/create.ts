@@ -7,7 +7,17 @@ async function main() {
     data: {
       name: "Node.js Course",
       description: "Complete 2022 Node.js course",
-      duration: 210
+      duration: 210,
+      teacher: {
+        connectOrCreate: {
+          where: {
+            name: "John Doe"
+          },
+          create: {
+            name: "John Doe"
+          }
+        }
+      }
     },
   });
 
